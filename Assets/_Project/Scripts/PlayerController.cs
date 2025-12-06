@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     [Range(0f, 10f)] private float speed = 8f; 
     
-    //
     private Rigidbody rb;
 
     private bool movingForward = true;
