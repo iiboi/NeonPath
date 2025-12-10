@@ -14,8 +14,8 @@ public class PlatformSpawnController : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             FindAnyObjectByType<PlatformSpawner>().PlatformSpawn();
-            Invoke(nameof(PlatformFall), 1.5f);
-            Invoke(nameof(PlatformDestroy), 3.5f);
+            Invoke(nameof(PlatformFall), 1f);
+            Invoke(nameof(PlatformDestroy), 2.5f);
         }
 
     }

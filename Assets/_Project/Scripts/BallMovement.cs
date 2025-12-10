@@ -1,4 +1,3 @@
-using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class BallMovement : MonoBehaviour
@@ -7,6 +6,7 @@ public class BallMovement : MonoBehaviour
     [SerializeField] private float speed = 8f;
 
     private Rigidbody rb;
+
 
     private bool isMovingForward = true;
 
@@ -20,10 +20,17 @@ public class BallMovement : MonoBehaviour
         rb.linearVelocity = Vector3.forward * speed;
     }
 
-
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+
+        if (transform.position.y > 0.75)
+        {
+            Vector3 tempPos = transform.position;
+            tempPos.y = 0.75f;
+            transform.position = tempPos;    
+        }
+        
+        if (Input.GetMouseButtonDown(0))
         {
             Movement();
         }
