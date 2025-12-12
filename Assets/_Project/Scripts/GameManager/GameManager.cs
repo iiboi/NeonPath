@@ -5,11 +5,13 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     [SerializeField] BallMovement ballMovement;
     int score = 0;
-    int SpeedLevel = 1;
+    int speedLevel = 1;
+
+    public bool isGameOver = false;
 
     public static GameManager instance;
 
-    private void Awake() 
+    private void Awake()
     {
         instance = this;
     }
@@ -23,10 +25,21 @@ public class GameManager : MonoBehaviour
         {
             ballMovement.IncreaseSpeed();
 
-            Debug.Log($"Speed Level: {SpeedLevel}");
-            SpeedLevel++;
+            Debug.Log($"Speed Level: {speedLevel}");
+            speedLevel++;
         }
     }
-    
+
+    public void GameOver()
+    {
+        if (isGameOver == true)
+        {
+            return;
+        }
+
+        isGameOver = true;
+
+        Debug.Log($"Game Over!");
+    }    
     
 }

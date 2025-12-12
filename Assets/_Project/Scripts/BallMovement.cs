@@ -22,6 +22,16 @@ public class BallMovement : MonoBehaviour
     private void Update()
     {
 
+        if (transform.position.y < -2)
+        {
+            GameManager.instance.GameOver();
+        }
+
+        if (GameManager.instance.isGameOver == true)
+        {
+            return;
+        }
+
         if (transform.position.y > 0.75)
         {
             Vector3 tempPos = transform.position;
