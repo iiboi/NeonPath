@@ -14,13 +14,16 @@ public class BallMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Start() 
+    public void StartMove()
     {
         rb.linearVelocity = Vector3.forward * speed;
     }
-
     private void Update()
     {
+        if (GameManager.instance.isGameStarted == false)
+        {
+            return;
+        }
 
         if (transform.position.y < -2)
         {
