@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         {
             ballMovement.IncreaseSpeed();
             
-            Debug.Log($"Speed Level: {speedLevel}");
+            //Debug.Log($"Speed Level: {speedLevel}");
             speedLevel++;
         }
     }
@@ -93,12 +93,15 @@ public class GameManager : MonoBehaviour
     //Oyun yeniden başlatılır. Oyuncu, oyun sonu ekranında "Retry" Butonuna tıkladığında çalışır.
     public void RestartGame()
     {
+        // Debug.Log("Pressed!!!");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     //Oyun kapanır. Oyuncu, oyun sonu ekranında "Quit" Butonuna tıkladığında çalışır.
     public void QuitGame()
     {
+        
+        // Debug.Log("Pressed!!!");
         Application.Quit();
     }
 }
