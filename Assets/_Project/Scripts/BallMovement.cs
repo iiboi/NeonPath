@@ -43,10 +43,10 @@ public class BallMovement : MonoBehaviour
         }
 
         //Eğer topun yüksekliği 0.75'den büyükse onu 0.75'e sabitler. Bunu topun ufak ufak zıplamalar yapması yüzünden yazdım.
-        if (transform.position.y > 0.75)
+        if (transform.position.y > 3)
         {
             Vector3 tempPos = transform.position;
-            tempPos.y = 0.75f;
+            tempPos.y = 3f;
             transform.position = tempPos;    
         }
         
