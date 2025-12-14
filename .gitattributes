@@ -1,0 +1,13 @@
+*.shader linguist-detectable=false
+*.cginc linguist-detectable=false
+*.hlsl linguist-detectable=false
+*.glsl linguist-detectable=false
+*.mat linguist-detectable=false
+*.meta linguist-detectable=false
+
+*.cpp linguist-vendored
+*.c linguist-vendored
+*.h linguist-vendored
+*.cmake linguist-vendored
+
+*.cs linguist-detectable=true
